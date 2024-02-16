@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Usa `ng serve` para un servidor de desarrollo. La ruta queda en `http://localhost:4200/`. La aplicacion se recarga sola cuando detecta cambios en los archivos.
 
 ## Build
-Para buildear la aplicacion no hay mas que usar `ng build` y se compilaria todo el proyecto en la carpeta `/dist`
+Para buildear la aplicacion no hay mas que usar `ng build` y se compilaria todo el proyecto en la carpeta `/dist`. No recomiendo revisar el codigo de esta manera porque se vuelve ilegible. Es mejor partir del `index.html` y ir yendo componente por componente a medida que lo vayas descubriendo
 
 ## Troubleshootting
 - Por si hubiera problemas de compatibilidad, la version de Node que estoy usando es `v21.5.0` (no es LTS), y la versión de npm es `10.2.4`.
