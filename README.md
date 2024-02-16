@@ -3,10 +3,10 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3. Quizás se necesite instalar Angular aparte en esa versión, aunque con `npm install` debería bastar para tenerlo todo en orden. 
 
 ## Modo Servidor
-Usa `ng serve` para un servidor de desarrollo. La ruta queda en `http://localhost:4200/`. La aplicacion se recarga sola cuando detecta cambios en los archivos.
+Usa `npm run start` (`ng serve`)  para un servidor de desarrollo. La ruta queda en `http://localhost:4200/`. La aplicacion se recarga sola cuando detecta cambios en los archivos.
 
 ## Build
-Para buildear la aplicacion no hay mas que usar `ng build` y se compilaria todo el proyecto en la carpeta `/dist`. No recomiendo revisar el codigo de esta manera porque se vuelve ilegible. Es mejor partir del `index.html` y ir yendo componente por componente a medida que lo vayas descubriendo
+Para buildear la aplicacion no hay mas que usar `npm run build` (`ng build`) y se compilaria todo el proyecto en la carpeta `/dist`. No recomiendo revisar el codigo de esta manera porque se vuelve ilegible. Es mejor partir del `index.html` y ir yendo componente por componente a medida que lo vayas descubriendo
 
 ## Troubleshootting
 - Si no reconoce el comando `ng`, usa `npm install -g @angular/cli`
