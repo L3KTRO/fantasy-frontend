@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  font: 100% #ff4b44;
+  color: #11111f;
+  scroll-behavior: smooth;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Koulen, sans-serif;
+  overflow-x: hidden
+}
+
+@font-face {
+  font-family: Koulen;
+  src: url('./assets/Koulen/Koulen-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal
+}
+
+div {
+  margin: 0;
+  padding: 0
+}

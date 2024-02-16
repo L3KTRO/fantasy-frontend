@@ -1,0 +1,87 @@
+$base: #11111F;
+$mid: #232433;
+$high: #FF4B44;
+$white: #ffffff;
+
+html, body {
+  font: 100% $high;
+  color: $base;
+  margin: 0;
+  padding: 0;
+  font-family: 'Koulen', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: 'Koulen';
+  src: url('./assets/Koulen/Koulen-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#container-root {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: left;
+  min-height: 100vh;
+  background-color: $base;
+  color: $white;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.container-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  max-width: 100%;
+}
+
+.container-part h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+  color: $white;
+}
+
+.container-content {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 25rem;
+}
+
+.container-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.container-list-item {
+  margin: 0.5rem auto;
+  padding: 1.5rem;
+  width: 25rem;
+  height: 2.5rem;
+  color: $white;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: $mid;
+}
+
+.item-photo {
+  width: 3rem;
+  height: 3rem;
+  background-color: $base;
+}
+
+

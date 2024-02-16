@@ -1,0 +1,14 @@
+<up-header></up-header>
+<div id="container-root">
+  <div class="container-part">
+    <team-field [team]="local"></team-field>
+    <formation [players]=localPlayers [formation]="[3, 3, 4]"></formation>
+  </div>
+  <div class="container-part">
+    <h1 id="versus">VS</h1>
+  </div>
+  <div class="container-part">
+    <team-field [team]="visitor"></team-field>
+    <formation [players]=visitorPlayers [formation]="[4, 3, 3]"></formation>
+  </div>
+</div>

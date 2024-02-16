@@ -1,0 +1,20 @@
+<div id="header">
+  <div id="header-up" class="header-part">
+    <div id="header-items">
+      <h1 class="header-main" routerLink="/">Fantasy</h1>
+      <h1 class="header-main">|</h1>
+      <h1 class="header-main">MATCHES</h1>
+      <h1 class="header-main">players</h1>
+      <h1 class="header-main">11 Ideal</h1>
+      <h1 class="header-main">injuries</h1>
+    </div>
+  </div>
+  <div id="header-separator"></div>
+  <div id="header-down" class="header-part">
+    <div id="header-teams" >
+      <img class="header-team" *ngFor="let team of teams" src="{{team.badgeColor}}" alt="team"
+           routerLink="/team/{{team.id}}"
+      />
+    </div>
+  </div>
+</div>

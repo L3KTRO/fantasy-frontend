@@ -1,0 +1,23 @@
+
+
+
+<up-header></up-header>
+<div id="container-root">
+  <div class="container-part">
+    <h2>next matches</h2>
+    <div id="next-matches" class="container-list container-content">
+      <match-field *ngFor="let match of matches" [match]="match"></match-field>
+    </div>
+  </div>
+  <div class="container-part">
+    <h2>best players</h2>
+    <div id="best-players" class="container-list container-content">
+      <player-field *ngFor="let player of players.slice(0, 5)" [player]="player"></player-field>
+    </div>
+  </div>
+
+  <div class="container-part">
+    <h2>TOTW</h2>
+    <formation [players]="idealFormation" [formation]="[4, 3, 3]"></formation>
+  </div>
+</div>

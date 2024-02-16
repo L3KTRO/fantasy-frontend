@@ -1,0 +1,32 @@
+@use "../../../base";
+
+.container-formation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  max-width: 100%;
+}
+
+.formation-field {
+  margin: 3rem 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.formation-players {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.formation-line {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,22 @@
+@use "../../base";
+
+.stat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  * {
+    margin: 0 1rem;
+  }
+}
+
+
+#canvases {
+  display: flex;
+  flex-direction: column;
+}
+
+#container-mid {
+  width: 300px;
+}

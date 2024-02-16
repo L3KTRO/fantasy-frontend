@@ -1,0 +1,8 @@
+<div id="totw" class="container-content container-formation">
+  <img class="formation-field" ngSrc="../../../assets/field.png" alt="player photo" height="402" width="320"/>
+  <div class="formation-players">
+    <div class="formation-line" *ngFor="let playerList of players_split">
+      <player-in-formation *ngFor="let player of playerList" [player]="player"></player-in-formation>
+    </div>
+  </div>
+</div>

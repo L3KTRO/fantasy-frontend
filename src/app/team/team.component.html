@@ -1,0 +1,19 @@
+<up-header></up-header>
+
+<div id="container-root">
+  <div class="container-part">
+    <formation [players]="playersObs" [formation]="[4, 4, 2]"></formation>
+  </div>
+  <div class="container-part">
+    <h2>best players</h2>
+    <div id="best-players" class="container-list container-content">
+      <player-field *ngFor="let player of playersToBest" [player]="player"></player-field>
+    </div>
+  </div>
+  <div class="container-part">
+    <h2>Value players</h2>
+    <div class="container-list container-content">
+      <player-field *ngFor="let player of playersToValue" [player]="player"></player-field>
+    </div>
+  </div>
+</div>
