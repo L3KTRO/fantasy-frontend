@@ -93,39 +93,6 @@ export class PlayerComponent implements OnInit, AfterViewInit {
       }
     });
 
-    let points = this.player.stats.map(stat => stat.totalPoints);
-    let weeks = this.player.stats.map(stat => stat.weekNumber).sort((a, b) => a - b);
-    let ctx2 = this.pointsChart?.nativeElement.getContext('2d');
-    new Chart(ctx2, {
-      type: "line",
-      data: {
-        labels: weeks,
-        datasets: [{
-          label: 'Puntos',
-          data: points,
-          fill: false,
-          borderColor: 'rgb(75, 192, 192)',
-          tension: 0.1
-        }
-        ]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: false,
-            min: 0, // 5 less than the smallest value
-            max: Math.max(...points) + 1,
-            ticks: {
-              stepSize: 5
-            },
-            grid: {
-              display: true
-            }
-          }
-        }
-      }
-    });
-
   }
 
   get pointsByDolar(){

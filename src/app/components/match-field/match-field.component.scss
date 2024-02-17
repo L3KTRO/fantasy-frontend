@@ -7,6 +7,12 @@
   justify-content: space-around;
 }
 
+.item-match > * {
+  flex-shrink: 1;
+  margin: 0;
+  padding: 0;
+}
+
 #mid {
   display: flex;
   flex-direction: column;

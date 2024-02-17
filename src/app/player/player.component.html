@@ -10,9 +10,8 @@
     <team-field [team]="team"></team-field>
     <div id="canvases">
       <canvas #valueChart width="300px" height="300px"></canvas>
-      <canvas #pointsChart width="300px" height="300px"></canvas>
     </div>
-    <h1>{{value.toLocaleString("es-ES")}}</h1>
+    <h1>Valor actual: {{value.toLocaleString("es-ES")}}</h1>
   </div>
   <div class="container-part">
     <div id="stats">
@@ -22,7 +21,7 @@
         <h3>{{lastStat.totalPoints}}</h3>
       </div>
       <div class="stat">
-        <h3>Puntos por saldo</h3>
+        <h3>Saldo por punto</h3>
         <h3>{{pointsByDolar}}</h3>
       </div>
     </div>

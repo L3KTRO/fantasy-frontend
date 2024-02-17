@@ -31,6 +31,7 @@ html, body {
   color: $white;
   padding: 0 20px;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .container-part {
@@ -84,4 +85,12 @@ html, body {
   background-color: $base;
 }
 
+@media (max-width: 600px) {
+  .container-list-item {
+    width: 18rem;
+  }
 
+  #container-root {
+    padding: 10px;
+  }
+}

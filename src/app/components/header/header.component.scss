@@ -26,14 +26,16 @@ div {
   margin: 0;
   padding: 0 3rem;
   font-size: 3rem;
+  max-height: 86px;
 }
 
 #header-items {
   display: flex;
   justify-content: space-between;
+  align-content: center;
   align-items: center;
   flex-direction: row;
-  margin: 0 auto 0 1rem;
+  margin: 0 auto;
 }
 
 #header-separator {
@@ -62,6 +64,7 @@ div {
 
 #header-teams {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   flex-direction: row;
@@ -77,4 +80,11 @@ div {
   max-height: 34px;
   max-width: 34px;
   margin: 0 0.5rem;
+}
+
+
+@media screen and (max-width: 600px) {
+  .header-opt {
+    display: none;
+  }
 }
