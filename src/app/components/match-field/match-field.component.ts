@@ -34,7 +34,7 @@ export class MatchFieldComponent implements OnInit {
   }
 
   get localLogo(): SafeUrl {
-    return this.local.badgeColor
+    return this.local?.badgeColor
   }
 
   get visitorLogo(): SafeUrl {
@@ -46,7 +46,7 @@ export class MatchFieldComponent implements OnInit {
   }
 
   get visitorShortName() {
-    return this.visitor.shortName
+    return this.visitor?.shortName
   }
 
   get localName() {

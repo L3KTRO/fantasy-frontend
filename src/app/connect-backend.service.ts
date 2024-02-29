@@ -59,4 +59,42 @@ export class ConnectBackendService {
   getPlayerPhoto(id: number){
     return `${endpoint}photos/player_${id}.png`
   }
+
+  chunk(arr: any[], chunkSize: number = 5) {
+    console.log(arr, chunkSize)
+    const chunked = [];
+    for (let i = 0; i < arr.length; i += chunkSize) {
+      const chunk = arr.slice(i, i + chunkSize);
+      chunked.push(chunk);
+    }
+    return chunked
+  }
+
+
+  normalizarDatos(datos: number[]): number[] {
+    const minValor: number = Math.min(...datos);
+    const maxValor: number = Math.max(...datos);
+    return datos.map(valor => (valor - minValor) / (maxValor - minValor));
+  }
+
+  prepararListas(listas: number[][]): number[][] {
+    const listaGrande: number[] = listas.reduce((a, b) => a.length >= b.length ? a : b);
+    const listaPequena: number[] = listas.reduce((a, b) => a.length < b.length ? a : b);
+
+    const proporcionMuestreo: number = listaGrande.length / listaPequena.length;
+    const listaGrandeMuestreada = [];
+
+    for (let i = 0; i < listaPequena.length; i++) {
+      const indiceMuestreo = Math.round(i * proporcionMuestreo);
+      listaGrandeMuestreada.push(listas[indiceMuestreo]);
+    }
+
+    const listasPreparadas: number[][] = [];
+    listaGrandeMuestreada.forEach((valor, index) => {
+      const listaNormalizada = this.normalizarDatos(listas[index]);
+      listasPreparadas.push(listaNormalizada);
+    });
+
+    return listasPreparadas;
+  }
 }

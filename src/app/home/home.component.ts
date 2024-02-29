@@ -24,7 +24,7 @@ import {map, Observable} from "rxjs";
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  idealFormation: Observable<Player[]> = this.backService.getTeamPlayers(1);
+  idealFormation: Observable<Player[]> = this.backService.getTeamPlayers(15);
   matches = this.getMatches()
   players = this.getBestPlayers()
 

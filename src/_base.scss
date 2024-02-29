@@ -10,7 +10,7 @@ html, body {
   padding: 0;
   font-family: 'Koulen', sans-serif;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow: hidden;
   max-width: 100%;
 }
 
@@ -25,11 +25,10 @@ html, body {
   display: flex;
   flex-direction: row;
   align-items: start;
-  justify-content: left;
   min-height: 100vh;
+  justify-content: space-evenly;
   background-color: $base;
   color: $white;
-  padding: 0 20px;
   text-align: center;
   flex-wrap: wrap;
 }
@@ -51,6 +50,7 @@ html, body {
   margin: 0;
   padding: 0;
   color: $white;
+  text-align: center;
 }
 
 .container-content {
@@ -90,7 +90,39 @@ html, body {
     width: 18rem;
   }
 
+  body {
+    overflow: auto;
+    overflow-x: hidden;
+  }
+
   #container-root {
     padding: 10px;
   }
+
+  .container-content {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .container-part h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+    color: $white;
+    text-align: center;
+  }
+}
+
+
+
+#title-page {
+  display: block;
+  background-color: $base;
+  margin: 0;
+  color: white;
+  text-align: center;
+  padding: 0 0 1rem 0;
+  font-size: 2.5rem;
 }

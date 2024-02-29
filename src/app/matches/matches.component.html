@@ -1,0 +1,9 @@
+<up-header></up-header>
+<h1 id="title-page">next matches</h1>
+<div id="container-root">
+  <div class="container-part" *ngFor="let chunk of matchesChunked">
+    <div class="container-list">
+      <match-field *ngFor="let match of chunk" [match]="match"></match-field>
+    </div>
+  </div>
+</div>

@@ -4,4 +4,13 @@
   margin: 15rem 0 0 0;
 }
 
+@media (max-width: 830px) {
+  #container-root {
+    flex-direction: column;
+  }
+  #versus {
+    margin: 5rem 0;
+  }
+}
+
 

@@ -6,7 +6,7 @@ import {ActivatedRoute} from "@angular/router";
 import {switchMap} from "rxjs";
 import {Player, Team} from "../../data/types";
 import {TeamFieldComponent} from "../components/team/team-field/team-field.component";
-import { Chart } from 'chart.js/auto';
+import {Chart} from 'chart.js/auto';
 import _default from "chart.js/dist/plugins/plugin.tooltip";
 import type = _default.defaults.animations.numbers.type;
 
@@ -46,34 +46,41 @@ export class PlayerComponent implements OnInit, AfterViewInit {
     })
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     this.charting();
   }
 
-  charting(){
+  charting() {
     let marketValues = this.player.historicalMarket.map(value => value.marketValue);
+    let points = this.player.stats.map(value => value.totalPoints);
     let dates = this.player.historicalMarket.map(value =>
       new Date(value.date).toLocaleDateString()
     );
 
-    let minValue = Math.min(...marketValues);
-    let maxValue = Math.max(...marketValues);
-    let range = maxValue - minValue;
-    let desiredTicks = 8;
-    let stepSize = range / (desiredTicks);
+
+    let listas = this.backService.prepararListas([marketValues, points]);
+    let stepSize = 8
 
     let ctx = this.valueChart?.nativeElement.getContext('2d');
     new Chart(ctx, {
       type: "line",
       data: {
         labels: dates,
-        datasets: [{
-          label: 'Valor de mercado',
-          data: marketValues,
+        datasets: [
+          {
+          label: 'Coso 1',
+          data: listas[0],
           fill: false,
           borderColor: 'rgb(75, 192, 192)',
           tension: 0.1
-        }
+        },
+          {
+            label: 'Coso 2',
+            data: listas[1],
+            fill: false,
+            borderColor: 'rgb(75, 192, 192)',
+            tension: 0.1
+          }
         ]
       },
       options: {
@@ -95,11 +102,11 @@ export class PlayerComponent implements OnInit, AfterViewInit {
 
   }
 
-  get pointsByDolar(){
+  get pointsByDolar() {
     return Math.floor(this.value / this.lastStat.totalPoints).toLocaleString("es-ES")
   }
 
-  get lastStat(){
+  get lastStat() {
     return this.player.stats[this.player.stats.length - 1]
   }
 

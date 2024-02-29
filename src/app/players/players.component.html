@@ -1,0 +1,9 @@
+<up-header></up-header>
+<h1 id="title-page">Best players</h1>
+<div id="container-root">
+  <div class="container-part" *ngFor="let chunk of playersChunked">
+    <div class="container-list">
+      <player-field *ngFor="let player of chunk" [player]="player"></player-field>
+    </div>
+  </div>
+</div>

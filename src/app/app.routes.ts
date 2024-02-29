@@ -20,5 +20,26 @@ export const routes: Routes = [
   {
     path: "player/:id",
     loadComponent: () => import("./player/player.component").then(m => m.PlayerComponent)
+  },
+
+  {
+    path: "matches",
+    loadComponent: () => import("./matches/matches.component").then(m => m.MatchesComponent)
+  },
+
+  {
+    path: "players",
+    loadComponent: () => import("./players/players.component").then(m => m.PlayersComponent)
+  },
+
+  {
+    path: "injuries",
+    loadComponent: () => import("./injuries/injuries.component").then(m => m.InjuriesComponent)
+  },
+
+  {
+    path: "**",
+    pathMatch: "full",
+    loadComponent: () => import("./not-found/not-found.component").then(m => m.NotFoundComponent)
   }
 ];

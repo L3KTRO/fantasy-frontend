@@ -43,3 +43,19 @@
 #points-decorator {
   font-size: 1rem;
 }
+
+@media (max-width: 600px) {
+  .item-name {
+    width: 125px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: start;
+    display: inline-block;
+    height: 32px;
+    max-height: 32px;
+    position: relative;
+    padding: 5px 0;
+  }
+}
+
