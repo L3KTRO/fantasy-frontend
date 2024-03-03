@@ -1,8 +1,8 @@
 <div id="header">
   <div id="header-up" class="header-part">
-    <div id="header-items">
-      <h1 class="header-main" routerLink="/" id="backpack">Fantasy</h1>
-      <h1 class="header-main header-opt">|</h1>
+    <h1 class="header-main" id="backpack" (click)="isMenuOpen = !isMenuOpen">Fantasy</h1>
+    <div id="header-items" [class.open]="isMenuOpen">
+      <h1 class="header-main header-opt" routerLink="/">Inicio</h1>
       <h1 class="header-main header-opt" routerLink="/matches">MATCHES</h1>
       <h1 class="header-main header-opt" routerLink="/players">players</h1>
       <h1 class="header-main header-opt" routerLink="/">TOTW</h1>
