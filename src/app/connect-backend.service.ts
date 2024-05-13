@@ -2,14 +2,12 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Match, Player, Team} from "../data/types";
 
-const endpoint = "https://api.lestro.site/"
-
+const endpoint = "https://api.lestro.top/" // "http://localhost:30904/"
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConnectBackendService {
-
 
   constructor(private http: HttpClient) {
   }

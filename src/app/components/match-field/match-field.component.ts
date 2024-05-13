@@ -42,7 +42,7 @@ export class MatchFieldComponent implements OnInit {
   }
 
   get localShortName() {
-    return this.local.shortName
+    return this.local?.shortName
   }
 
   get visitorShortName() {
