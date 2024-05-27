@@ -5,10 +5,17 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.75rem;
 
   * {
     margin: 0 1rem;
   }
+}
+
+.alinging-center {
+  display: flex;
+  flex-direction: column;
+
 }
 
 

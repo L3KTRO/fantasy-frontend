@@ -4,26 +4,43 @@
 <div id="container-root">
   <div class="container-part">
     <img ngSrc="{{playerImage}}" height="256" width="256" alt="player">
-    <h1>{{name}}</h1>
-  </div>
-  <div class="container-part" id="container-mid">
-    <team-field [team]="team"></team-field>
-    <div id="canvases">
-      <canvas #valueChart width="300px" height="300px"></canvas>
-    </div>
-    <h1>Valor actual: {{value.toLocaleString("es-ES")}}</h1>
+    <h1>{{ name }}</h1>
   </div>
   <div class="container-part">
     <div id="stats">
-      <h1>Jornada {{lastStat.weekNumber}}</h1>
+      <h1>Jornada {{ stat.weekNumber }}</h1>
       <div class="stat">
         <h3>Puntos</h3>
-        <h3>{{lastStat.totalPoints}}</h3>
+        <h3>{{ stat.totalPoints }}</h3>
       </div>
       <div class="stat">
-        <h3>Saldo por punto</h3>
-        <h3>{{pointsByDolar}}</h3>
+        <h3>Minutos jugados</h3>
+        <h3>{{ stat.stats.mins_played.first }}</h3>
+      </div>
+      <div class="stat">
+        <h3>goles</h3>
+        <h3>{{ stat.stats.goals.first }}</h3>
+      </div>
+      <div class="stat">
+        <h3>asistencias</h3>
+        <h3>{{ stat.stats.goal_assist.second }}</h3>
+      </div>
+      <div class="stat">
+        <h3>tarjetas amarillas</h3>
+        <h3>{{ stat.stats.yellow_card.first }}</h3>
+      </div>
+      <div class="stat">
+        <h3>tarjetas rojas</h3>
+        <h3>{{ stat.stats.red_card.first }}</h3>
+      </div>
+      <div class="stat">
+        <h3>11 ideal</h3>
+        <h3>{{ stat.isInIdealFormation ? "✔︎" : "✖︎" }}</h3>
       </div>
     </div>
+  </div>
+  <div class="container-part" id="container-mid">
+    <team-field [team]="team"></team-field>
+    <h1>Valor actual: {{ value.toLocaleString("es-ES") }}</h1>
   </div>
 </div>

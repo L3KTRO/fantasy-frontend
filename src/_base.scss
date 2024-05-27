@@ -10,7 +10,7 @@ html, body {
   padding: 0;
   font-family: 'Koulen', sans-serif;
   scroll-behavior: smooth;
-  overflow: hidden;
+  overflow-x: hidden;
   max-width: 100%;
 }
 
@@ -25,7 +25,6 @@ html, body {
   display: flex;
   flex-direction: row;
   align-items: start;
-  min-height: 100vh;
   justify-content: space-evenly;
   background-color: $base;
   color: $white;

@@ -1,3 +1,5 @@
+@use "./base";
+
 html, body {
   font: 100% #ff4b44;
   color: #11111f;
@@ -6,7 +8,8 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: Koulen, sans-serif;
-  overflow-x: hidden
+  overflow-x: hidden;
+  background-color: base.$base;
 }
 
 @font-face {

@@ -21,27 +21,27 @@ interface PlayerStats {
 }
 
 interface Stats {
-  minsPlayed: NumPair;
+  mins_played: NumPair;
   goals: NumPair;
-  goalAssist: NumPair;
-  offtargetAttAssist: NumPair;
-  penAreaEntries: NumPair;
-  penaltyWon: NumPair;
-  penaltySave: NumPair;
+  goal_assist: NumPair;
+  offtarget_att_assist: NumPair;
+  pen_area_entries: NumPair;
+  penalty_won: NumPair;
+  penalty_save: NumPair;
   saves: NumPair;
-  effectiveClearance: NumPair;
-  penaltyFailed: NumPair;
-  ownGoals: NumPair;
-  goalsConceded: NumPair;
-  yellowCard: NumPair;
-  secondYellowCard: NumPair;
-  redCard: NumPair;
-  totalScoringAtt: NumPair;
-  wonContest: NumPair;
-  ballRecovery: NumPair;
-  possLostAll: NumPair;
-  penaltyConceded: NumPair;
-  marcaPoints: NumPair;
+  effective_clearance: NumPair;
+  penalty_failed: NumPair;
+  own_goals: NumPair;
+  goals_conceded: NumPair;
+  yellow_card: NumPair;
+  second_yellow_card: NumPair;
+  red_card: NumPair;
+  total_scoring_att: NumPair;
+  won_contest: NumPair;
+  ball_recovery: NumPair;
+  poss_lost_all: NumPair;
+  penalty_conceded: NumPair;
+  marca_points: NumPair;
 }
 
 interface NumPair {
