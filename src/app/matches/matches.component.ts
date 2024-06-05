@@ -29,7 +29,7 @@ export class MatchesComponent {
 
     this.backService.getMatches().subscribe(data => {
       const filteredMatches = data
-        .filter(match => match.matchState == 1)
+        .filter(match => match.matchState == 7)
         .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
       for (let i = 0; i < 15 && i < filteredMatches.length; i++) {
         matches.push(filteredMatches[i]);

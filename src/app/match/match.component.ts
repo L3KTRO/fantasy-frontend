@@ -36,11 +36,11 @@ export class MatchComponent implements OnInit {
   }
 
   get local() {
-    return this.match?.local
+    return this.match.local
   }
 
   get visitor() {
-    return this.match?.visitor
+    return this.match.visitor
   }
 
 }
