@@ -15,7 +15,6 @@
 .alinging-center {
   display: flex;
   flex-direction: column;
-
 }
 
 
@@ -24,8 +23,9 @@
   flex-direction: column;
 }
 
-#container-mid {
+.container-mid {
   width: 300px;
+  align-self: center;
 }
 
 @media (max-width: 600px) {

@@ -2,7 +2,7 @@
 
 
 <div id="container-root">
-  <div class="container-part">
+  <div class="container-part container-mid">
     <img ngSrc="{{playerImage}}" height="256" width="256" alt="player">
     <h1>{{ name }}</h1>
   </div>
@@ -39,7 +39,7 @@
       </div>
     </div>
   </div>
-  <div class="container-part" id="container-mid">
+  <div class="container-part container-mid">
     <team-field [team]="team"></team-field>
     <h1>Valor actual: {{ value.toLocaleString("es-ES") }}</h1>
   </div>
