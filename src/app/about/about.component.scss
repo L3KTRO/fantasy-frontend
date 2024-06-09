@@ -1,0 +1,22 @@
+@use "../../base";
+
+#send-message {
+  display: flex;
+  background-color: base.$mid;
+  color: base.$white;
+  text-align: center;
+  padding: 3rem;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  align-self: flex-end;
+}
+
+#send-button {
+  background-color: #00aa20;
+  color: base.$white;
+  padding: 0.5rem;
+  width: 10rem;
+  align-self: center;
+  border: none;
+}

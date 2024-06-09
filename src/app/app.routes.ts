@@ -11,32 +11,34 @@ export const routes: Routes = [
     path: "match/:id",
     loadComponent: () => import("./match/match.component").then(m => m.MatchComponent)
   },
-
   {
     path: "team/:id",
     loadComponent: () => import("./team/team.component").then(m => m.TeamComponent)
   },
-
   {
     path: "player/:id",
     loadComponent: () => import("./player/player.component").then(m => m.PlayerComponent)
   },
-
   {
     path: "matches",
     loadComponent: () => import("./matches/matches.component").then(m => m.MatchesComponent)
   },
-
   {
     path: "players",
     loadComponent: () => import("./players/players.component").then(m => m.PlayersComponent)
   },
-
   {
     path: "injuries",
     loadComponent: () => import("./injuries/injuries.component").then(m => m.InjuriesComponent)
   },
-
+  {
+    path: "about",
+    loadComponent: () => import("./about/about.component").then(m => m.AboutComponent)
+  },
+  {
+    path: "login",
+    loadComponent: () => import("./login/login.component").then(m => m.LoginComponent)
+  },
   {
     path: "**",
     pathMatch: "full",

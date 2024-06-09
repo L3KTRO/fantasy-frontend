@@ -1,0 +1,22 @@
+@use "../../base";
+
+#login-part {
+  display: flex;
+  background-color: base.$mid;
+  color: base.$white;
+  text-align: center;
+  padding: 6rem;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  align-self: flex-end;
+}
+
+#login-button {
+  background-color: #00aa20;
+  color: base.$white;
+  padding: 0.5rem;
+  width: 10rem;
+  align-self: center;
+  border: none;
+}

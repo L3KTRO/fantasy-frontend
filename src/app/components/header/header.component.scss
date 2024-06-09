@@ -37,13 +37,13 @@ div {
   flex-direction: column;
   margin: 0 auto;
 
-  transition: max-height .5s;
+  transition: max-height .75s;
   max-height: 0;
   overflow: hidden;
 
   &.open {
-    transition: max-height .5s;
-    max-height: 350px;
+    transition: max-height .75s;
+    max-height: 610px;
   }
 }
 
