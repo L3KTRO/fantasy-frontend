@@ -1,8 +1,7 @@
 <a routerLink="/match/{{matchId}}">
 <div class="container-list-item item-match">
-  <img [ngSrc]="localLogo"
-       height="50"
-       width="40"
+  <img src="{{localLogo}}"
+       class="team-logo"
        alt="team photo"/>
   <h4>{{localShortName}}</h4>
   <div id="mid">
@@ -10,9 +9,8 @@
     <h5 id="date">{{date}} {{time}}</h5>
   </div>
   <h4>{{visitorShortName}}</h4>
-  <img [ngSrc]="visitorLogo"
-       height="50"
-       width="40"
+  <img src="{{visitorLogo}}"
+       class="team-logo"
        alt="team photo"/>
 </div>
 </a>

@@ -7,6 +7,7 @@ import {FormationComponent} from "../components/formation/formation.component";
 import {NgForOf} from "@angular/common";
 import {PlayerFieldComponent} from "../components/player/player-field/player-field.component";
 import {Observable, switchMap} from "rxjs";
+import {TeamFieldComponent} from "../components/team/team-field/team-field.component";
 
 @Component({
   selector: 'app-team',
@@ -15,7 +16,8 @@ import {Observable, switchMap} from "rxjs";
     HeaderComponent,
     FormationComponent,
     NgForOf,
-    PlayerFieldComponent
+    PlayerFieldComponent,
+    TeamFieldComponent
   ],
   templateUrl: './team.component.html',
   styleUrl: './team.component.scss'
